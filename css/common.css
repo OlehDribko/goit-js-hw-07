@@ -17,6 +17,43 @@ body {
   line-height: 1.5;
 }
 
+#categories{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  
+}
+
+.item{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: #F6F6FE;
+  
+ 
+
+}
+
+
+.item ul{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+}
+.item ul li{
+  display: block;
+  border: 1px solid;
+  border-radius: 4px;
+  width: 360px;
+  
+  
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -52,6 +89,9 @@ body {
   height: 40px;
   border-radius: 8px;
   color: #fafafa;
+}
+.btn-login:hover{
+  background-color: #6C8CFF;
 }
 .passw-input,
 .email-input {
@@ -103,9 +143,17 @@ body {
 
 #boxes {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 44px;
   background-color: #F6F6FE;
   width: 100%;
   
 }
+#controls [data-destroy]:hover{
+  background-color: #FF7070;
+}
+#controls [data-create]:hover{
+  background-color: #6C8CFF;
+}
+
