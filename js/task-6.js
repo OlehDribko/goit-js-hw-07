@@ -14,9 +14,9 @@ function destroyBoxes() {
   boxesContainer.innerHTML = "";
   input.value = "";
 }
-
+let size = 30;
 function createBoxes(amount) {
-  let size = 30;
+  
   const elements = [];
 
   for (let i = 0; i < amount; i++) {
@@ -31,6 +31,7 @@ function createBoxes(amount) {
   }
 
   boxesContainer.append(...elements);
+  
 }
 
 createBtn.addEventListener("click", () => {
@@ -43,4 +44,5 @@ createBtn.addEventListener("click", () => {
 });
 destroyBtn.addEventListener("click", () => {
   destroyBoxes();
+  size = 30;
 });
