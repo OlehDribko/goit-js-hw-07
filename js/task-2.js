@@ -25,16 +25,20 @@ const images = [
   },
 ];
 
-const Images = document.querySelector(".gallery");
+const gallery = document.querySelector(".gallery");
 
-images.forEach((image) => {
-  const newElementOfimg = document.createElement("li");
-  const newImg = document.createElement("img");
-  newImg.src = image.url;
-  newImg.alt = image.alt;
+function createElement(images) {
+  const elements = images.map((image) => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = image.url;
+    img.alt = image.alt;
+    img.classList.add("img-list");
+    li.append(img);
+    return li;
+  });
 
-  newImg.classList.add("img-list");
+  gallery.append(...elements);
+}
 
-  newElementOfimg.append(newImg);
-  Images.append(newElementOfimg);
-});
+createElement(images);

@@ -1,10 +1,8 @@
 const form = document.querySelector("form");
-const arrValueForm = {};
 
-console.log(form);
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(form.elements["email"].value.trim());
   const email = form.elements["email"].value.trim();
   const password = form.elements["password"].value.trim();
 
@@ -21,4 +19,4 @@ form.addEventListener("submit", (event) => {
   console.log(formData);
   form.reset();
 });
-console.log(arrValueForm);
+
